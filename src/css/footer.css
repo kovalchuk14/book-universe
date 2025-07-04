@@ -1,0 +1,305 @@
+:root {
+  --color-scheme-1-background: var(--color-bamboo-lightest);
+  --color-neutral-darkest: #0b0500;
+  --color-scheme-1-border: var(--opacity-neutral-darkest-15);
+  --color-scheme-1-text: var(--color-neutral-darkest);
+  --color-neutral-lighter: #dad9d8;
+  --color-white: #fff;
+  --color-neutral-lightest: #f2f2f2;
+  --color-neutral-light: #b5b4b2;
+  --color-neutral: #85827f;
+  --color-neutral-dark: #54504c;
+  --color-neutral-darker: #231e19;
+  --opacity-transparent: rgba(255, 255, 255, 0);
+  --color-scheme-1-foreground: var(--color-bamboo-lighter);
+  --color-scheme-1-accent: var(--color-neutral-darkest);
+  --opacity-white-5: rgba(255, 255, 255, 0.05);
+  --opacity-white-10: rgba(255, 255, 255, 0.1);
+  --opacity-white-15: rgba(255, 255, 255, 0.15);
+  --opacity-white-20: rgba(255, 255, 255, 0.2);
+  --opacity-white-30: rgba(255, 255, 255, 0.3);
+  --opacity-white-40: rgba(255, 255, 255, 0.4);
+  --opacity-white-50: rgba(255, 255, 255, 0.5);
+  --opacity-white-60: rgba(255, 255, 255, 0.6);
+  --opacity-neutral-darkest-5: rgba(11, 5, 0, 0.05);
+  --opacity-neutral-darkest-10: rgba(11, 5, 0, 0.1);
+  --opacity-neutral-darkest-15: rgba(11, 5, 0, 0.15);
+  --opacity-neutral-darkest-20: rgba(11, 5, 0, 0.2);
+  --opacity-neutral-darkest-30: rgba(11, 5, 0, 0.3);
+  --opacity-neutral-darkest-40: rgba(11, 5, 0, 0.4);
+  --opacity-neutral-darkest-50: rgba(11, 5, 0, 0.5);
+  --opacity-neutral-darkest-60: rgba(11, 5, 0, 0.6);
+  --color-bamboo-lightest: #fceee6;
+  --color-bamboo-lighter: #f9decd;
+  --color-bamboo-light: #ea8d50;
+  --color-bamboo: #e15d05;
+  --color-bamboo-dark: #b44a04;
+  --color-bamboo-darker: #5a2502;
+  --color-bamboo-darkest: #431b01;
+  --color-scheme-2-text: var(--color-neutral-darkest);
+  --color-scheme-2-background: var(--color-bamboo-lighter);
+  --color-scheme-2-border: var(--opacity-neutral-darkest-15);
+  --color-scheme-2-accent: var(--color-neutral-darkest);
+  --color-scheme-2-foreground: var(--color-bamboo-lightest);
+  --color-scheme-3-text: var(--color-neutral-darkest);
+  --color-scheme-3-background: var(--color-bamboo-light);
+  --color-scheme-3-border: var(--opacity-white-20);
+  --color-scheme-3-accent: var(--color-white);
+  --color-scheme-3-foreground: var(--color-bamboo);
+  --color-error-red: #ad0000;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 0;
+  margin: 0;
+}
+
+.footer {
+  width: 100%;
+  min-width: 375px;
+  margin: 0 auto;
+  background: var(--color-scheme-3-background);
+  padding: 80px 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-logo {
+  text-align: center;
+}
+
+.logo-image {
+  max-height: 40px;
+  width: auto;
+}
+
+.footer-nav {
+  text-align: center;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  opacity: 0.8;
+}
+
+.nav-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-scheme-1-text);
+}
+
+.footer-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.join-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-scheme-3-text);
+}
+
+.subscription-form {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.email-input {
+  flex: 1;
+  border-radius: 4px;
+  width: 221px;
+  height: 48px;
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  padding: 8px 12px;
+  width: 221px;
+  height: 48px;
+  background-color: transparent;
+  outline: none;
+}
+
+.email-input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--opacity-neutral-darkest-60);
+}
+
+.email-input:focus {
+  border-color: #d35400;
+}
+
+.subscribe-button {
+  border: 1px solid var(--color-neutral-darkest);
+  border-radius: 4px;
+  width: 106px;
+  height: 48px;
+  transition: all 0.3s ease;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-neutral-darkest);
+  background: var(--color-scheme-3-background);
+}
+
+.subscribe-button:hover {
+  background-color: #231e19;
+  color: #fff;
+}
+
+.required-note {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-scheme-3-text);
+  margin-top: 12px;
+}
+
+.footer-credits {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.divider {
+  border: 1px solid var(--color-scheme-3-border);
+  margin-bottom: 32px;
+}
+
+.credits-row {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-scheme-3-text);
+}
+
+span {
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 80px 40px;
+  }
+
+  .footer-content {
+    gap: 60px;
+  }
+
+  .footer-left-column {
+    gap: 32px;
+  }
+
+  .footer-nav ul {
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .footer-right-column {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .join-title {
+    text-align: left;
+  }
+
+  .subscription-form {
+    justify-content: center;
+  }
+
+  .footer-credits {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding: 80px 64px;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .footer-left-column {
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .footer-logo {
+    text-align: left;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+    gap: 32px;
+    justify-content: flex-start;
+  }
+
+  .footer-right-column {
+    padding: 0;
+  }
+
+  .email-input {
+    width: 278px;
+  }
+
+  .join-title {
+    text-align: left;
+  }
+
+  .subscription-form {
+    justify-content: flex-end;
+  }
+
+  .footer-credits {
+    margin-top: 80px;
+  }
+}
