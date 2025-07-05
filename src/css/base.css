@@ -1,5 +1,10 @@
 :root {
   --main-color: #0B0500;
+  --background-color: #FCEEE6;
+  --strong-orange: #E15D05;
+  --light-orange: #EA8D50;
+  --white: #FFF;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,7 +22,7 @@ body {
   font-size: 16px;
   line-height: 150%;
   font-weight: 400;
-  background-color: #FCEEE6;
+  background-color: var(--background-color);
   color: var(--main-color);
 }
 
@@ -27,8 +32,4 @@ main {
 
 section {
   padding: 64px 0;
-}
-
-.hidden {
-  display: none;
 }

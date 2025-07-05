@@ -1,11 +1,11 @@
 {
-  "name": "JS117-group-project13",
+  "name": "book-universe",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/JS117-group-project13/",
+    "build": "vite build --base=/book-universe/",
     "preview": "vite preview"
   },
   "devDependencies": {
