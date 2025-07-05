@@ -58,7 +58,6 @@
 
 .footer {
   width: 100%;
-  min-width: 375px;
   margin: 0 auto;
   background: var(--color-scheme-3-background);
   padding: 80px 16px;
@@ -150,8 +149,8 @@
   height: 48px;
   border: 1px solid var(--opacity-neutral-darkest-15);
   padding: 8px 12px;
-  width: 221px;
   height: 48px;
+  width: clamp(200px, 58.93vw, 221px);
   background-color: transparent;
   outline: none;
 }
