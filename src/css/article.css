@@ -1,0 +1,44 @@
+.article-section {
+  padding: 64px 0;
+}
+
+.article-container {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+}
+
+.article-title {
+  font-size: 2.25rem;
+  line-height: 120%;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.article-description {
+  font-size: 1.125rem;
+}
+
+.article-image-container img {
+  border-radius: 16px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .article-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .article-title {
+    font-size: 2.5rem;
+  }
+  .article-image-container img {
+    width: 640px;
+  }
+  .atricle-description-container {
+    flex: 0 0 50%;
+  }
+  .article-image-container {
+    flex: 0 0 50%;
+  }
+}
