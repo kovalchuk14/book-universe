@@ -51,9 +51,14 @@
 
 .footer-container {
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: var(--color-scheme-3-background);
   padding: 0;
   margin: 0;
+}
+
+footer {
+  background-color: var(--color-scheme-3-background);
+  width: 100%;
 }
 
 .footer {
@@ -290,6 +295,7 @@ footer .required-note span {
 
   .footer-right-column {
     padding: 0;
+    margin-right: 0;
   }
 
   .email-input {
