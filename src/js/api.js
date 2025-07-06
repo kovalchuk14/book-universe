@@ -22,3 +22,8 @@ export async function getBooksListByCategory(category) {
     const response = await axios.get(endPoint[2] + category);
     return response.data;
 }
+
+export async function getBookById(id) {
+    const response = await axios.get(endPoint[3] + id);
+    return response.data;
+}

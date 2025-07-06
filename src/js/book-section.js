@@ -1,8 +1,10 @@
 import { getBooksCategoriesList, getBooksList, getBooksListByCategory } from "./api";
 import { renderBookCategoriesList, renderBookList, updateBookCounter } from "./render-function";
 import { refs } from "./refs";
-import { switchBookCategories, chooseBookCategory } from "./hendlers";
+import { switchBookCategories, chooseBookCategory, openBook, closeBook, buyBook, addToCartBook } from "./hendlers";
 import { STORAGE_KEYS } from "./constants";
+import Accordion from "accordion-js";
+import "accordion-js/dist/accordion.min.css";
 
 
 async function initCategoryList() {
@@ -27,3 +29,7 @@ initBooks();
 initCategoryList();
 refs.book_category_button.addEventListener("click", switchBookCategories);
 refs.book_category_list.addEventListener("click", chooseBookCategory);
+refs.books_list.addEventListener("click", openBook);
+refs.modal_book_close_button.addEventListener("click", closeBook);
+refs.modal_book_buy_button.addEventListener("submit", buyBook);
+refs.modal_book_add_card_button.addEventListener("click", addToCartBook);
