@@ -13,7 +13,9 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" />
   <script type="module" crossorigin src="/book-universe/index.js"></script>
-  <link rel="stylesheet" crossorigin href="/book-universe/assets/index-wuBAyTW3.css">
+  <link rel="modulepreload" crossorigin href="/book-universe/assets/vendor-BOUMGWLJ.js">
+  <link rel="stylesheet" crossorigin href="/book-universe/assets/vendor-CvoZEexK.css">
+  <link rel="stylesheet" crossorigin href="/book-universe/assets/index-GoXap1hW.css">
 </head>
 
 <body>
@@ -21,7 +23,34 @@
 
   <main>
     
-    
+    <section class="book-section">
+    <div class="container book-container">
+        <h2 class="visually-hidden">Trending books</h2>
+        <div class="book-interface">
+            <div class="book-counter-container">
+                <h3 class="book-section-title">Books</h3>
+                <div class="book-counter">Showing ** of ***</div>
+            </div>
+            <div class="book-categories-list-container">
+                <div class="book-select-menu">
+                    Categories
+                </div>
+                <svg class="book-menu-icon" width="24" height="24">
+                    <use href="../img/sprite.svg#icon-down-type-one"></use>
+                </svg>
+                <div class="book-categories-list-wrapper">
+                    <ul class="book-categories-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="book-list-container">
+            <ul class="book-list">
+            </ul>
+            <button class="modal-btn book-button-show-more">Show More</button>
+        </div>
+    </div>
+</section>
     
     
     
@@ -88,7 +117,19 @@
   </div>
 </footer>
 
-  
+  <div class="modal-book">
+    <div class="modal-book__content">
+        <button class="modal-book-close-button">
+        </button>
+        <div class="modal-book-full-info">
+            NOT FOUND
+            <div class="modal-book-button-container">
+                <button class="modal-btn modal-book-cart-button" type="button">Add to Cart</button>
+                <button class="main-btn modal-book-buy-button" type="submit">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
   
 
 </body>
