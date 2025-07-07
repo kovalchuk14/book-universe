@@ -92,9 +92,9 @@ function deleteButtons() {
 
 function switchBookIcon(event) {
     if (event.target.closest('.ac').classList.contains('is-active')) {
-        event.target.querySelector("use").setAttribute('xlink:href', '../img/sprite.svg#icon-up-type-one');
+        event.target.querySelector("use").setAttribute('xlink:href', '/img/sprite.svg#icon-up-type-one');
     } else {
-        event.target.querySelector("use").setAttribute('xlink:href', '../img/sprite.svg#icon-down-type-one');
+        event.target.querySelector("use").setAttribute('xlink:href', '/img/sprite.svg#icon-down-type-one');
     }
 }
 
