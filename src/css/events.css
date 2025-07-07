@@ -49,6 +49,7 @@
 .events-item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 545px;
   width: 100%;
 }
@@ -116,12 +117,20 @@
   margin-top: 32px;
   flex-wrap: nowrap;
 }
-.swiper-pagination {
+.events-nav .swiper-pagination {
   order: 1;
   text-align: left;
   flex-grow: 1;
-  position: static !important;
-  text-align: left !important;
+  position: static;
+  text-align: left;
+  /* position: static !important;
+  text-align: left !important; */
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: black;
+  color: black;
+  /* color: black !important;
+  background: black !important; */
 }
 .events-buttons {
   display: flex;
@@ -129,13 +138,23 @@
   order: 2;
   position: static;
 }
-.swiper-button-prev,
-.swiper-button-next {
-  position: static !important;
+.events-buttons .swiper-button-prev {
+  position: static;
   border: 1px solid rgba(11, 5, 0, 0.15);
   padding: 12px;
-  width: 48px !important;
-  height: 48px !important;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(242, 149, 9, 0.893);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.events-buttons .swiper-button-next {
+  position: static;
+  border: 1px solid rgba(11, 5, 0, 0.15);
+  padding: 12px;
+  width: 48px;
+  height: 48px;
   background-color: rgba(242, 149, 9, 0.893);
   display: flex;
   justify-content: center;
@@ -147,6 +166,32 @@
   width: 1em;
   height: 1em;
   stroke-width: 0;
+}
+.events-buttons .swiper-button-prev {
+  color: transparent;
+  all: unset;
+  display: none;
+}
+.events-buttons .swiper-button-next {
+  color: transparent;
+  display: none;
+}
+*/ .swiper-button-next::after {
+  display: none !important;
+  content: none;
+}
+
+.swiper-button-prev::after {
+  display: none !important;
+  content: none;
+}
+.swiper-button-prev .icon-arrow-left {
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  background: var(--color-scheme-3-foreground);
+  fill: #0b0500;
 }
 @media screen and (min-width: 768px) {
   .events-photo {
@@ -160,5 +205,8 @@
     width: 421px;
     height: 277px;
     width: 100%;
+  }
+  .events-buttons {
+    display: none;
   }
 }

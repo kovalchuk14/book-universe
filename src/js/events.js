@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     spaceBetween: 30,
-    loop: true,
+    loop: false,
     observer: true,
     observeParents: true,
     watchOverflow: true,
