@@ -72,34 +72,11 @@
 }
 
 .book-categories-list {
-    width: 100%;
+    background-color: rgb(11, 5, 0, 0.05);
     padding: 0 12px;
-    border-radius: 8px;
-    border: 1px solid rgb(11, 5, 0, 0.15);
-    position: absolute;
-    inset-block-start: 44px;
-    inset-inline-start: 0;
-    max-height: 296px;
-    overflow-y: scroll;
-    display: none;
 }
 
-/* width */
-.book-categories-list::-webkit-scrollbar {
-    width: 3px;
-}
 
-/* Track */
-.book-categories-list::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 4px;
-}
-
-/* Handle */
-.book-categories-list::-webkit-scrollbar-thumb {
-    background: var(--strong-orange);
-    border-radius: 4px;
-}
 
 .book-category {
     padding: 8px 0;
@@ -118,6 +95,37 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.book-categories-list-wrapper {
+    width: 100%;
+
+    border-radius: 8px;
+    border: 1px solid rgb(11, 5, 0, 0.15);
+    position: absolute;
+    inset-block-start: 44px;
+    inset-inline-start: 0;
+    max-height: 296px;
+    overflow-y: scroll;
+    display: none;
+    background-color: var(--background-color);
+}
+
+/* width */
+.book-categories-list-wrapper::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+.book-categories-list-wrapper::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 4px;
+}
+
+/* Handle */
+.book-categories-list-wrapper::-webkit-scrollbar-thumb {
+    background: var(--strong-orange);
+    border-radius: 4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -179,9 +187,6 @@
         width: 121px;
     }
 
-    .book-categories-list {
-        display: block !important;
-    }
 
     .book-select-menu {
         display: none;
@@ -195,12 +200,17 @@
         all: unset;
     }
 
-    .book-categories-list {
+    .book-categories-list-wrapper {
+        display: block !important;
         position: static;
         overflow-y: visible;
         max-height: fit-content;
         border: none;
         margin-top: 24px;
         padding: 0;
+    }
+
+    .book-categories-list {
+        background-color: transparent;
     }
 }

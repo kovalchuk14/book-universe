@@ -9,6 +9,7 @@ import "accordion-js/dist/accordion.min.css";
 
 async function initCategoryList() {
     let list = await getBooksCategoriesList();
+    list = list.filter(item => item.list_name?.trim());
     list.unshift({ list_name: "ALL" });
     renderBookCategoriesList(list);
 }

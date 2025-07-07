@@ -5,10 +5,10 @@ import { STORAGE_KEYS } from "./constants";
 import Accordion from "accordion-js";
 
 export function switchBookCategories() {
-    if (refs.book_category_list.style.display === 'block') {
-        refs.book_category_list.style.display = 'none';
+    if (refs.book_category_list_wrap.style.display === 'block') {
+        refs.book_category_list_wrap.style.display = 'none';
     } else {
-        refs.book_category_list.style.display = 'block';
+        refs.book_category_list_wrap.style.display = 'block';
     }
 }
 
