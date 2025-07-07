@@ -1,5 +1,5 @@
 import { refs } from "./refs";
-import { clearBookList, renderBookListByCategory, updateBookCounter, openModal, closeModal, renderModalBook, } from "./render-function";
+import { clearBookList, updateBookCounter, openModal, closeModal, renderModalBook, renderBookList, updateShowButton } from "./render-function";
 import { getBooksListByCategory, getBookById } from "./api";
 import { STORAGE_KEYS } from "./constants";
 import Accordion from "accordion-js";
@@ -21,11 +21,26 @@ export async function chooseBookCategory(event) {
         return;
     }
     refs.book_menu_text.textContent = event.target.textContent;
+    if (event.target.textContent == "All categories") {
+        STORAGE_KEYS.current_books_category_is_all = true;
+    } else {
+        STORAGE_KEYS.current_books_category_is_all = false;
+    }
+
     clearBookList();
-    let books = await getBooksListByCategory(event.target.textContent);
-    STORAGE_KEYS.current_books_count = books.length;
+    STORAGE_KEYS.current_books_count = (window.innerWidth <= 767) ? 10 : 24;
+    if (STORAGE_KEYS.current_books_category_is_all) {
+        renderBookList(STORAGE_KEYS.book_list, 0, STORAGE_KEYS.current_books_count);
+        STORAGE_KEYS.current_books_count = Math.min(STORAGE_KEYS.book_list.length, (window.innerWidth <= 767) ? 10 : 24);
+        STORAGE_KEYS.max_books_count = STORAGE_KEYS.book_list.length;
+    } else {
+        STORAGE_KEYS.book_list_with_category = await getBooksListByCategory(event.target.textContent);
+        STORAGE_KEYS.current_books_count = Math.min(STORAGE_KEYS.book_list_with_category.length, (window.innerWidth <= 767) ? 10 : 24);
+        renderBookList(STORAGE_KEYS.book_list_with_category, 0, STORAGE_KEYS.current_books_count);
+        STORAGE_KEYS.max_books_count = STORAGE_KEYS.book_list_with_category.length;
+    }
     updateBookCounter();
-    renderBookListByCategory(books);
+    updateShowButton();
     if (window.innerWidth < 1440) switchBookCategories();
 }
 
@@ -34,7 +49,8 @@ export function buyBook() {
 }
 
 export function addToCartBook() {
-    console.log("THANK YOU SO MUCH");
+    //!
+    console.log("Item added");
 }
 
 export async function openBook(event) {
@@ -44,17 +60,16 @@ export async function openBook(event) {
     new Accordion(".accordion-container", {
         showMultiple: true,
     });
-    refs.modal_book_buy_button.addEventListener("click", () => {
-        console.log("1");
-    });
-    refs.modal_book_add_card_button.addEventListener("click", addToCartBook);
+
+    document.querySelector(".modal-book-buy-button").addEventListener("click", buyBook);
+    document.querySelector(".modal-book-cart-button").addEventListener("click", addToCartBook);
     openModal();
     document.body.style.overflow = 'hidden';
 }
 
 export function closeBook() {
-    refs.modal_book_buy_button.removeEventListener("submit", buyBook);
-    refs.modal_book_add_card_button.removeEventListener("click", addToCartBook);
+    document.querySelector(".modal-book-buy-button").removeEventListener("click", buyBook);
+    document.querySelector(".modal-book-cart-button").removeEventListener("click", addToCartBook);
     closeModal();
 }
 
@@ -68,5 +83,17 @@ document.addEventListener('keydown', e => {
         closeModal();
     }
 });
+
+
+export function showMoreBooks() {
+    if (STORAGE_KEYS.current_books_category_is_all) {
+        renderBookList(STORAGE_KEYS.book_list, STORAGE_KEYS.current_books_count, STORAGE_KEYS.current_books_count + Math.min(4, STORAGE_KEYS.max_books_count - STORAGE_KEYS.current_books_count));
+    } else {
+        renderBookList(STORAGE_KEYS.book_list_with_category, STORAGE_KEYS.current_books_count, STORAGE_KEYS.current_books_count + Math.min(4, STORAGE_KEYS.max_books_count - STORAGE_KEYS.current_books_count));
+    }
+    STORAGE_KEYS.current_books_count += Math.min(4, STORAGE_KEYS.max_books_count - STORAGE_KEYS.current_books_count);
+    updateBookCounter();
+    updateShowButton();
+}
 
 

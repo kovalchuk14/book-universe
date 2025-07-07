@@ -109,4 +109,90 @@
 .modal-book-buy-button {
     margin-bottom: 32px;
     height: 48px;
+    width: 100%;
+    max-width: none;
+}
+
+.modal-book-accordion-container .accordion-container {
+    background-color: var(--background-color);
+}
+
+.modal-book-accordion-container .ac {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+.modal-book-accordion-container .ac {
+    padding: 12px 0;
+    border-top: 1px solid rgb(11, 5, 0, 0.15);
+    ;
+}
+
+/* Прибрати лінію в останнього */
+.modal-book-accordion-container .ac:last-child {
+    border-bottom: 1px solid rgb(11, 5, 0, 0.15);
+}
+
+.modal-book-accordion-container * {
+    color: var(--main-color) !important;
+    font-family: Rubik !important;
+    line-height: 150% !important;
+}
+
+.ac-trigger {
+    font-weight: 600 !important;
+    font-size: 18px !important;
+}
+
+.ac-text {
+    font-weight: 400 !important;
+    font-size: 16px !important;
+}
+
+.ac .ac-trigger::after {
+    /* content: "" !important; */
+}
+
+@media screen and (min-width: 768px) {
+    .modal-book__content {
+        max-width: 704px;
+        padding: 16px 32px;
+    }
+
+    .modal-book-full-info {
+        display: flex;
+        align-items: start;
+        padding: 64px 0;
+    }
+
+    .modal-book-img {
+        margin: 0;
+        margin-right: 24px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .modal-book__content {
+        max-width: 1300px;
+        padding: 16px 104px;
+    }
+
+    .modal-book-img {
+        width: 309px;
+    }
+
+    .modal-book-cart-button,
+    .modal-book-buy-button {
+        max-width: 309px;
+        margin: 0;
+
+    }
+
+    .modal-book-button-container {
+        display: flex;
+        width: 100%;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
 }

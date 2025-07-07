@@ -10,11 +10,11 @@ export function renderBookCategoriesList(list) {
     refs.book_category_list.insertAdjacentHTML("beforeend", content);
 }
 
-export function renderBookList(list) {
+export function renderBookList(list, from, to) {
     // const content
     let content = "";
-    for (let i = 0, j = 0, k = 0; i < STORAGE_KEYS.current_books_count; i++) {
-        let book = list[j].books[k];
+    for (let i = from; i < to; i++) {
+        let book = list[i];
         content += `
             <li class="book-card" data-id=${book._id}>
                 <img src="${book.book_image}" alt="${book.title}" class="book-img">
@@ -28,38 +28,13 @@ export function renderBookList(list) {
                 <button class="main-btn book-btn">Learn More</button>
             </li>
         `;
-        k++;
-        if (k == list[j].books.length) {
-            k = 0;
-            j++;
-        }
-        if (j == list.length) break;
     }
     refs.books_list.insertAdjacentHTML("beforeend", content);
 }
 
 
-export function renderBookListByCategory(list) {
-    const content = list.map((book) => {
-        return `
-        <li class="book-card" data-id=${book._id}>
-            <img src="${book.book_image}" alt="${book.title}" class="book-img">
-            <div class="book-info">
-                <div>
-                    <div class="book-title">${book.title}</div>
-                    <div class="book-author">${book.author}</div>
-                </div>
-                <div class="book-price">${book.price}$</div>
-            </div>
-            <button class="main-btn  book-btn">Learn More</button>
-        </li>
-    `
-    }).join("");
-    refs.books_list.insertAdjacentHTML("beforeend", content);
-}
-
 export function updateBookCounter() {
-    refs.book_counter.textContent = `Showing ${STORAGE_KEYS.current_books_count} of 100`;
+    refs.book_counter.textContent = `Showing ${STORAGE_KEYS.current_books_count} of ${STORAGE_KEYS.max_books_count}`;
 }
 
 export function clearBookList() {
@@ -83,7 +58,7 @@ export function renderModalBook(book) {
                 <div class="modal-book-author">${book.author}</div>
                 <div class="modal-book-price">$${book.price}</div>
                 <div class="modal-book-counter">on progress</div>
-                <div>
+                <div class="modal-book-button-container">
                     <button class="modal-btn modal-book-cart-button" type="button">Add to Cart</button>
                     <button class="main-btn modal-book-buy-button" type="submit">Buy Now</button>
                 </div>
@@ -126,4 +101,13 @@ export function renderModalBook(book) {
                 </div>
             </div>
     `;
+}
+
+export function updateShowButton() {
+    if (refs.book_show_more_button.style.display == "none") {
+        refs.book_show_more_button.style.display = "block";
+    }
+    if (STORAGE_KEYS.current_books_count == STORAGE_KEYS.max_books_count) {
+        refs.book_show_more_button.style.display = "none";
+    }
 }

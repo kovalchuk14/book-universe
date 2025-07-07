@@ -6,6 +6,10 @@
     margin-top: 24px;
 }
 
+.book-list-container {
+    width: 100%;
+}
+
 .book-btn {
     margin-top: auto;
 }
@@ -30,6 +34,7 @@
 }
 
 .book-select-menu {
+    overflow-x: hidden;
     font-size: 18px;
 }
 
