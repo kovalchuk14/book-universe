@@ -4,20 +4,20 @@
   border-radius: 10px;
 }
 
-.header__content {
+.header_content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
 }
 
-.header__text h2 {
+.header_text h2 {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.header__btn {
+.header_btn {
   background-color: #f26522;
   color: white;
   padding: 0.6rem 1.2rem;
@@ -26,26 +26,28 @@
   cursor: pointer;
 }
 
-.header__image img {
-  max-width: 300px;
-  border-radius: 10px;
+.header_image img {
+padding : 56px;
+gap : 20px;
+  max-width: 1312px;
+  border-radius: 395px;
 }
 
-.header__bottom {
+.header_bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
 }
 
-.header__bottom h1 {
+.header_bottom h1 {
   font-size: 1.8rem;
 }
 
-.header__arrows button {
+.header_arrows button {
   background-color: #f26522;
   border: none;
-  color: white;
+  color: #0B0500;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-left: 0.5rem;
