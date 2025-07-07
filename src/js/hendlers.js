@@ -29,6 +29,14 @@ export async function chooseBookCategory(event) {
     if (window.innerWidth < 1440) switchBookCategories();
 }
 
+export function buyBook() {
+    console.log("THANK YOU SO MUCH");
+}
+
+export function addToCartBook() {
+    console.log("THANK YOU SO MUCH");
+}
+
 export async function openBook(event) {
     if (!event.target.classList.contains("book-btn")) return;
     let book = await getBookById(event.target.closest("li").dataset.id);
@@ -36,11 +44,17 @@ export async function openBook(event) {
     new Accordion(".accordion-container", {
         showMultiple: true,
     });
+    refs.modal_book_buy_button.addEventListener("click", () => {
+        console.log("1");
+    });
+    refs.modal_book_add_card_button.addEventListener("click", addToCartBook);
     openModal();
     document.body.style.overflow = 'hidden';
 }
 
 export function closeBook() {
+    refs.modal_book_buy_button.removeEventListener("submit", buyBook);
+    refs.modal_book_add_card_button.removeEventListener("click", addToCartBook);
     closeModal();
 }
 
@@ -56,10 +70,3 @@ document.addEventListener('keydown', e => {
 });
 
 
-export function buyBook() {
-    console.log("THANK YOU SO MUCH");
-}
-
-export function addToCartBook() {
-    console.log("THANK YOU SO MUCH");
-}

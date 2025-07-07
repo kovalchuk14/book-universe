@@ -31,5 +31,3 @@ refs.book_category_button.addEventListener("click", switchBookCategories);
 refs.book_category_list.addEventListener("click", chooseBookCategory);
 refs.books_list.addEventListener("click", openBook);
 refs.modal_book_close_button.addEventListener("click", closeBook);
-refs.modal_book_buy_button.addEventListener("submit", buyBook);
-refs.modal_book_add_card_button.addEventListener("click", addToCartBook);
