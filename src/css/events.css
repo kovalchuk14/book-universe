@@ -141,7 +141,7 @@
   padding: 12px;
   width: 48px;
   height: 48px;
-  background: var(--color-scheme-3-foreground);
+  background: #e15d05;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +152,7 @@
   padding: 12px;
   width: 48px;
   height: 48px;
-  background: var(--color-scheme-3-foreground);
+  background: #e15d05;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,6 +163,10 @@
   width: 1em;
   height: 1em;
   stroke-width: 0;
+}
+.events-buttons .swiper-button-prev,
+.events-buttons .swiper-button-next {
+  color: #ffffff;
 }
 
 .events-buttons .swiper-button-next::after {
@@ -180,16 +184,26 @@
   width: 48px;
   height: 48px;
   background: var(--color-scheme-3-foreground);
-  fill: #0b0500;
+  color: #0b0500;
 }
 
 .swiper-button-next:hover,
 .swiper-button-next:focus {
+  background-color: var(--color-scheme-1-background);
+  color: #0b0500;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-prev:focus {
   background: var(--color-scheme-1-background);
-  fill: var(--color-scheme-1-text);
+  color: #0b0500;
 }
 .swiper-button-next:active {
-  background: var(--color-bamboo-darker);
+  background: #5a2502;
+  color: #ffffff;
+}
+.swiper-button-prev:active {
+  background: #5a2502;
 }
 
 @media screen and (min-width: 768px) {
