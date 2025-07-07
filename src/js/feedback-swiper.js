@@ -42,6 +42,9 @@ export function initFeedbackSwiper() {
 
     btnPrev.disabled = swiperInstance.isBeginning;
     btnNext.disabled = swiperInstance.isEnd;
+
+    btnPrev.addEventListener("click", () => btnPrev.blur());
+    btnNext.addEventListener("click", () => btnNext.blur());
   }
 
   function updateControlButtons(swiperInstance) {

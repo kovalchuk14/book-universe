@@ -138,8 +138,8 @@
   display: inline-block;
 }
 
-.control-btn:hover,
-.control-btn.active {
+.control-btn:active,
+.control-btn:focus {
   opacity: 1;
 }
 
