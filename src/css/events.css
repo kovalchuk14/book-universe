@@ -86,9 +86,8 @@
   color: var(--color-scheme-1-text);
   padding-bottom: 16px;
 }
+
 .events-btn {
-  /* width: 95px; */
-  /* height: 24px; */
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
@@ -123,15 +122,13 @@
   flex-grow: 1;
   position: static;
   text-align: left;
-  /* position: static !important;
-  text-align: left !important; */
 }
+
 .swiper-pagination .swiper-pagination-bullet-active {
   background: black;
   color: black;
-  /* color: black !important;
-  background: black !important; */
 }
+
 .events-buttons {
   display: flex;
   gap: 16px;
@@ -144,7 +141,7 @@
   padding: 12px;
   width: 48px;
   height: 48px;
-  background-color: rgba(242, 149, 9, 0.893);
+  background: var(--color-scheme-3-foreground);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,7 +152,7 @@
   padding: 12px;
   width: 48px;
   height: 48px;
-  background-color: rgba(242, 149, 9, 0.893);
+  background: var(--color-scheme-3-foreground);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,22 +164,14 @@
   height: 1em;
   stroke-width: 0;
 }
-.events-buttons .swiper-button-prev {
-  color: transparent;
-  all: unset;
+
+.events-buttons .swiper-button-next::after {
   display: none;
-}
-.events-buttons .swiper-button-next {
-  color: transparent;
-  display: none;
-}
-*/ .swiper-button-next::after {
-  display: none !important;
   content: none;
 }
 
-.swiper-button-prev::after {
-  display: none !important;
+.events-buttons .swiper-button-prev::after {
+  display: none;
   content: none;
 }
 .swiper-button-prev .icon-arrow-left {
@@ -193,6 +182,16 @@
   background: var(--color-scheme-3-foreground);
   fill: #0b0500;
 }
+
+.swiper-button-next:hover,
+.swiper-button-next:focus {
+  background: var(--color-scheme-1-background);
+  fill: var(--color-scheme-1-text);
+}
+.swiper-button-next:active {
+  background: var(--color-bamboo-darker);
+}
+
 @media screen and (min-width: 768px) {
   .events-photo {
     width: 340px;
