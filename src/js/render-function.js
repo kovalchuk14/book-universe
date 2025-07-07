@@ -71,7 +71,7 @@ export function renderModalBook(book) {
                         <h3 class="ac-header">
                             <button type="button" class="ac-trigger">Details
                             <svg class="accordion-icon" width="24" height="24">
-                            <use xlink:href="/img/sprite.svg#icon-down-type-one"></use>
+                            <use href="/img/sprite.svg#icon-down-type-one"></use>
                             </svg>
                             </button>
                         </h3>
@@ -84,7 +84,7 @@ export function renderModalBook(book) {
                         <h3 class="ac-header">
                             <button type="button" class="ac-trigger">Shipping
                             <svg class="accordion-icon" width="24" height="24">
-                            <use xlink:href="/img/sprite.svg#icon-down-type-one"></use>
+                            <use href="/img/sprite.svg#icon-down-type-one"></use>
                             </svg>
                             </button>
                         </h3>
@@ -101,7 +101,7 @@ export function renderModalBook(book) {
                         <h3 class="ac-header">
                             <button type="button" class="ac-trigger">Returns
                             <svg class="accordion-icon" width="24" height="24">
-                            <use xlink:href="/img/sprite.svg#icon-down-type-one"></use>
+                            <use href="/img/sprite.svg#icon-down-type-one"></use>
                             </svg>
                             </button>
                         </h3>
