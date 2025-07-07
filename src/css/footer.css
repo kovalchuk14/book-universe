@@ -27,7 +27,6 @@ footer {
   margin: 0 auto;
   background: var(--color-scheme-3-background);
   padding: 80px 16px;
-  font-family: Arial, sans-serif;
   color: #333;
   box-sizing: border-box;
 }
@@ -82,7 +81,6 @@ footer {
 }
 
 .nav-text {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -96,7 +94,6 @@ footer {
 }
 
 .join-title {
-  font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -123,7 +120,6 @@ footer {
 }
 
 .email-input::placeholder {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -140,7 +136,6 @@ footer {
   width: 106px;
   height: 48px;
   transition: all 0.3s ease;
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -154,7 +149,6 @@ footer {
 }
 
 .required-note {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
@@ -173,7 +167,6 @@ footer {
 }
 
 .credits-row {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
