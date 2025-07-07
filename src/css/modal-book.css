@@ -95,8 +95,10 @@
     margin-bottom: 24px;
 }
 
-.modal-book-counter {
+.modal-book-counter-container {
     margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
 }
 
 .modal-book-cart-button {
@@ -124,11 +126,10 @@
 
 .modal-book-accordion-container .ac {
     padding: 12px 0;
+    border: none;
     border-top: 1px solid rgb(11, 5, 0, 0.15);
-    ;
 }
 
-/* Прибрати лінію в останнього */
 .modal-book-accordion-container .ac:last-child {
     border-bottom: 1px solid rgb(11, 5, 0, 0.15);
 }
@@ -151,6 +152,21 @@
 
 .ac .ac-trigger::after {
     /* content: "" !important; */
+}
+
+.modal-book-counter {
+    padding: 8px 12px;
+    background-color: rgb(11, 5, 0, 0.05);
+    border: 1px solid rgb(11, 5, 0, 0.15);
+    border-radius: 4px;
+}
+
+.modal-book-counter-button {
+    padding: 8px 12px;
+    color: var(--main-color);
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -195,4 +211,25 @@
         margin-bottom: 32px;
     }
 
+}
+
+
+.modal-book-accordion-container .ac .ac-trigger::after {
+    content: "";
+}
+
+.modal-book-accordion-container .ac.is-active>.ac-header .ac-trigger::after {
+    content: "";
+}
+
+.ac-header {
+    position: relative;
+}
+
+.accordion-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 8px;
 }

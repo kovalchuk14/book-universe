@@ -3,6 +3,7 @@ import { clearBookList, updateBookCounter, openModal, closeModal, renderModalBoo
 import { getBooksListByCategory, getBookById } from "./api";
 import { STORAGE_KEYS } from "./constants";
 import Accordion from "accordion-js";
+import iziToast from "izitoast";
 
 export function switchBookCategories() {
     if (refs.book_category_list_wrap.style.display === 'block') {
@@ -45,12 +46,15 @@ export async function chooseBookCategory(event) {
 }
 
 export function buyBook() {
-    console.log("THANK YOU SO MUCH");
+    iziToast.success({
+        title: 'NICEEE',
+        message: 'Successfully paid from your card',
+    });
 }
 
 export function addToCartBook() {
-    //!
-    console.log("Item added");
+
+    console.log("Item added: " + document.querySelector(".modal-book-counter").textContent + "0 times, good luck");
 }
 
 export async function openBook(event) {
@@ -61,15 +65,49 @@ export async function openBook(event) {
         showMultiple: true,
     });
 
-    document.querySelector(".modal-book-buy-button").addEventListener("click", buyBook);
-    document.querySelector(".modal-book-cart-button").addEventListener("click", addToCartBook);
+    initButtons();
     openModal();
     document.body.style.overflow = 'hidden';
 }
 
-export function closeBook() {
+function initButtons() {
+    document.querySelector(".modal-book-buy-button").addEventListener("click", buyBook);
+    document.querySelector(".modal-book-cart-button").addEventListener("click", addToCartBook);
+    document.querySelector(".button-increase").addEventListener("click", increaseModalBook);
+    document.querySelector(".button-decrease").addEventListener("click", decreaseModalBook);
+    document.querySelectorAll('.ac-trigger').forEach(trigger => {
+        trigger.addEventListener("click", switchBookIcon);
+    });
+}
+
+function deleteButtons() {
     document.querySelector(".modal-book-buy-button").removeEventListener("click", buyBook);
     document.querySelector(".modal-book-cart-button").removeEventListener("click", addToCartBook);
+    document.querySelector(".button-increase").removeEventListener("click", increaseModalBook);
+    document.querySelector(".button-decrease").removeEventListener("click", decreaseModalBook);
+    document.querySelectorAll('.ac-trigger').forEach(trigger => {
+        trigger.removeEventListener("click", switchBookIcon);
+    });
+}
+
+function switchBookIcon(event) {
+    if (event.target.closest('.ac').classList.contains('is-active')) {
+        event.target.querySelector("use").setAttribute('xlink:href', '../img/sprite.svg#icon-up-type-one');
+    } else {
+        event.target.querySelector("use").setAttribute('xlink:href', '../img/sprite.svg#icon-down-type-one');
+    }
+}
+
+function increaseModalBook() {
+    document.querySelector(".modal-book-counter").textContent = Number(document.querySelector(".modal-book-counter").textContent) + 1;
+}
+
+function decreaseModalBook() {
+    document.querySelector(".modal-book-counter").textContent = Math.max((Number(document.querySelector(".modal-book-counter").textContent) - 1), 1);
+}
+
+export function closeBook() {
+    deleteButtons();
     closeModal();
 }
 
@@ -95,5 +133,6 @@ export function showMoreBooks() {
     updateBookCounter();
     updateShowButton();
 }
+
 
 

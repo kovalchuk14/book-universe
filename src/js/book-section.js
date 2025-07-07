@@ -3,8 +3,8 @@ import { renderBookCategoriesList, renderBookList, updateBookCounter } from "./r
 import { refs } from "./refs";
 import { switchBookCategories, chooseBookCategory, openBook, closeBook, showMoreBooks, } from "./hendlers";
 import { STORAGE_KEYS } from "./constants";
-import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
+import "izitoast/dist/css/iziToast.min.css";
 
 
 async function initCategoryList() {

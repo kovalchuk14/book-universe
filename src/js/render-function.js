@@ -57,7 +57,11 @@ export function renderModalBook(book) {
                 <div class="modal-book-title">${book.title}</div>
                 <div class="modal-book-author">${book.author}</div>
                 <div class="modal-book-price">$${book.price}</div>
-                <div class="modal-book-counter">on progress</div>
+                <div class="modal-book-counter-container">
+                    <button type="button" class="modal-book-counter-button button-decrease">-</button>
+                    <div class="modal-book-counter">1</div>
+                    <button type="button" class="modal-book-counter-button button-increase">+</button>
+                </div>
                 <div class="modal-book-button-container">
                     <button class="modal-btn modal-book-cart-button" type="button">Add to Cart</button>
                     <button class="main-btn modal-book-buy-button" type="submit">Buy Now</button>
@@ -65,7 +69,11 @@ export function renderModalBook(book) {
                 <div class="accordion-container modal-book-accordion-container">
                     <div class="ac">
                         <h3 class="ac-header">
-                            <button type="button" class="ac-trigger">Details</button>
+                            <button type="button" class="ac-trigger">Details
+                            <svg class="accordion-icon" width="24" height="24">
+                            <use xlink:href="../img/sprite.svg#icon-down-type-one"></use>
+                            </svg>
+                            </button>
                         </h3>
                         <div class="ac-panel">
                             <p class="ac-text">${book.description}</p>
@@ -74,7 +82,11 @@ export function renderModalBook(book) {
 
                     <div class="ac">
                         <h3 class="ac-header">
-                            <button type="button" class="ac-trigger">Shipping</button>
+                            <button type="button" class="ac-trigger">Shipping
+                            <svg class="accordion-icon" width="24" height="24">
+                            <use xlink:href="../img/sprite.svg#icon-down-type-one"></use>
+                            </svg>
+                            </button>
                         </h3>
                         <div class="ac-panel">
                             <p class="ac-text">
@@ -87,7 +99,11 @@ export function renderModalBook(book) {
 
                     <div class="ac">
                         <h3 class="ac-header">
-                            <button type="button" class="ac-trigger">Returns</button>
+                            <button type="button" class="ac-trigger">Returns
+                            <svg class="accordion-icon" width="24" height="24">
+                            <use xlink:href="../img/sprite.svg#icon-down-type-one"></use>
+                            </svg>
+                            </button>
                         </h3>
                         <div class="ac-panel">
                             <p class="ac-text">
