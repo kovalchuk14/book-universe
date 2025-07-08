@@ -1,8 +1,12 @@
 .container-location {
-  margin: 64px 16px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .nav-container {
+  margin-bottom: 32px;
+}
+.text-location {
   margin-bottom: 32px;
 }
 
@@ -27,10 +31,6 @@
   font-size: 18px;
   line-height: 1.5;
   max-width: 343px;
-}
-
-.nav-location {
-  margin-bottom: 32px;
 }
 
 .nav-list-location {
@@ -64,22 +64,13 @@
   gap: 16px;
 }
 
-.map-location {
-  margin: 0 auto;
-  overflow: hidden;
-}
-
 .map {
   width: 100%;
-  min-height: 395px;
+  height: 395px;
   filter: grayscale(90%) contrast(1.3);
 }
 
 @media screen and (min-width: 768px) {
-  .container-location {
-    margin: 64px 32px;
-  }
-
   .p-location {
     max-width: 336px;
   }
@@ -94,7 +85,7 @@
 }
 @media screen and (min-width: 1440px) {
   .container-location {
-    margin: 64px 64px 106px;
+    padding-bottom: 106px;
   }
 
   .map {
