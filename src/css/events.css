@@ -1,0 +1,235 @@
+.events-box {
+  width: 100%;
+  position: relative;
+}
+.events-list {
+  width: 100%;
+  display: flex;
+}
+.events-section {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.swiper-slide {
+  height: auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.events-top {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--color-scheme-1-text);
+  padding-bottom: 16px;
+}
+
+.events-subtitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: var(--color-scheme-1-text);
+  padding-bottom: 16px;
+}
+.events-descr {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-scheme-1-text);
+  padding-bottom: 32px;
+}
+.events-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 545px;
+  width: 100%;
+}
+.events-photo {
+  border-radius: 16px;
+  height: 277px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.events-desc-title {
+  padding-top: 24px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: var(--color-scheme-1-text);
+}
+.events-data {
+  padding-bottom: 8px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-scheme-1-text);
+}
+.events-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-scheme-1-text);
+  padding-bottom: 16px;
+}
+
+.events-btn {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-neutral-darkest);
+  background: var(--color-scheme-1-background);
+  border: none;
+  text-align: left;
+  padding: 0;
+  margin-top: auto;
+}
+
+.events-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.events-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  flex-wrap: nowrap;
+}
+.events-nav .swiper-pagination {
+  order: 1;
+  text-align: left;
+  flex-grow: 1;
+  position: static;
+  text-align: left;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: black;
+  color: black;
+}
+
+.events-buttons {
+  display: flex;
+  gap: 16px;
+  order: 2;
+  position: static;
+}
+.events-buttons .swiper-button-prev {
+  position: static;
+  border: 1px solid rgba(11, 5, 0, 0.15);
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  background: #e15d05;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.events-buttons .swiper-button-next {
+  position: static;
+  border: 1px solid rgba(11, 5, 0, 0.15);
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  background: #e15d05;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  stroke-width: 0;
+  margin-left: 8px;
+}
+.events-buttons .swiper-button-prev,
+.events-buttons .swiper-button-next {
+  color: #ffffff;
+}
+
+.events-buttons .swiper-button-prev svg,
+.events-buttons .swiper-button-next svg {
+  width: 14px;
+  height: 14px;
+}
+
+.events-buttons .swiper-button-next::after {
+  display: none;
+  content: none;
+}
+
+.events-buttons .swiper-button-prev::after {
+  display: none;
+  content: none;
+}
+.swiper-button-prev .icon-arrow-left {
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  background: var(--color-scheme-3-foreground);
+  color: #0b0500;
+}
+
+.swiper-button-next:hover,
+.swiper-button-next:focus {
+  background-color: var(--color-scheme-1-background);
+  color: #0b0500;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-prev:focus {
+  background: var(--color-scheme-1-background);
+  color: #0b0500;
+}
+.swiper-button-next:active {
+  background: #5a2502;
+  color: #ffffff;
+}
+.swiper-button-prev:active {
+  background: #5a2502;
+}
+
+@media screen and (min-width: 768px) {
+  .events-photo {
+    width: 340px;
+    height: 277px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .events-photo {
+    width: 421px;
+    height: 277px;
+    width: 100%;
+  }
+  .events-buttons {
+    display: none;
+  }
+  .events-subtitle {
+    font-size: 48px;
+  }
+}
