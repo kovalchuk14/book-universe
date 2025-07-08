@@ -13,9 +13,9 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" />
   <script type="module" crossorigin src="/book-universe/index.js"></script>
-  <link rel="modulepreload" crossorigin href="/book-universe/assets/vendor-7XVaD3su.js">
+  <link rel="modulepreload" crossorigin href="/book-universe/assets/vendor-CvYJyY29.js">
   <link rel="stylesheet" crossorigin href="/book-universe/assets/vendor-Ctaf7TWq.css">
-  <link rel="stylesheet" crossorigin href="/book-universe/assets/index-BOfftIgr.css">
+  <link rel="stylesheet" crossorigin href="/book-universe/assets/index-CHwy5Zp3.css">
 </head>
 
 <body>
@@ -51,7 +51,42 @@
         </div>
     </div>
 </section>
-    
+    <section class="feedbacks">
+  <div class="container">
+    <div class="info-container">
+      <h2 class="section-title title-feedbacks">Customer Feedbacks</h2>
+      <p class="info-text">See what our readers are saying about us!</p>
+    </div>
+
+    <div class="swiper feedbackSwiper">
+      <ul class="swiper-wrapper"></ul>
+    </div>
+
+    <!-- buttons -->
+    <div class="feedback-buttons">
+      <div class="feedback-controls">
+        <button class="control-btn" data-index="0"></button>
+        <button class="control-btn" data-index="1"></button>
+        <button class="control-btn" data-index="2"></button>
+        <button class="control-btn" data-index="3"></button>
+      </div>
+
+      <div class="right-buttons-container">
+        <button class="swipe-btn sw" id="feedbackPrev">
+          <svg class="icon" width="14" height="14">
+            <use href="/book-universe/assets/sprite-D22cNzRz.svg#icon-left-type-two"></use>  
+          </svg>
+        </button>
+        <button class="swipe-btn sw" id="feedbackNext">
+          <svg class="icon" width="14" height="14">
+            <use href="/book-universe/assets/sprite-D22cNzRz.svg#icon-right-type-two"></use>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
     <section class="events-section container">
   <p class="events-top">Events</p>
   <h2 class="events-subtitle">Upcoming Events at Booksy</h2>
