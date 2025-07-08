@@ -2,7 +2,7 @@ import{S as x,N as S,K as N,A as I,P as T,a as g,b as O,i as U}from"./assets/ven
       <div class="feedback-card">
         <p class="comment">${o.text}</p>
         <div class="client-info">
-          <img src="/${o.avatar}" alt="${o.alt}">
+          <img src="${o.avatar}" alt="${o.alt}">
           <div class="client-text">
             <h3>${o.author}</h3>
             <p class="client-title">${o.title}</p>
