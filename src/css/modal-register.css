@@ -53,8 +53,11 @@ body.no-scroll {
   right: 8px;
   border: none;
   background: transparent;
-  font-size: 24px;
   cursor: pointer;
+}
+
+.contact-close-btn svg.icon {
+  padding: 8px;
 }
 
 .contact-modal-title {
@@ -157,6 +160,11 @@ textarea.error+.error-text {
 
   .contact-submit-btn {
     max-width: 342px;
+  }
+
+  .contact-close-btn {
+    top: 16px;
+    right: 16px;
   }
 }
 
