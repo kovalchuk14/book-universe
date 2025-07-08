@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="contact-backdrop" id="contact-modal-backdrop">
+    <div class="contact-modal">
+      <button class="contact-close-btn" id="contact-close-modal-btn">
+        <svg class="icon" width="36" height="36">
+          <use href="./img/sprite.svg#icon-exit"></use>
+        </svg>
+      </button>
+      <h2 class="contact-modal-title">Register</h2>
+      <p class="contact-event-title" id="contact-event-title"></p>
+
+      <form class="contact-modal-form" id="contact-register-form">
+        <label>
+          Name*
+          <input type="text" name="name" placeholder="Ann">
+          <span class="error-text">Please fill this field</span>
+        </label>
+        <label>
+          Email*
+          <input type="email" name="email" placeholder="hello@booksy.com">
+          <span class="error-text">Enter a valid email</span>
+        </label>
+        <label>
+          Message
+          <textarea name="message" placeholder="Enter your message..."></textarea>
+          <span class="error-text">Optional</span>
+        </label>
+        <button type="submit" class="modal-btn contact-submit-btn">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
