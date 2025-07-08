@@ -169,6 +169,12 @@
   color: #ffffff;
 }
 
+.events-buttons .swiper-button-prev svg,
+.events-buttons .swiper-button-next svg {
+  width: 14px;
+  height: 14px;
+}
+
 .events-buttons .swiper-button-next::after {
   display: none;
   content: none;
