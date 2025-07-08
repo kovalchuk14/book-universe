@@ -1,25 +1,24 @@
 <header class="header">
   <nav class="header__navbar">
-    <div class="header__logo">
-      <img src="/img/company-logo.svg" alt="Bookstore Logo">
-    </div>
+    <a href="/" class="header__logo" aria-label="Go to homepage">
+      <svg class="logo-icon">
+        <use href="/img/sprite.svg#logo" />
+      </svg>
+    </a>
 
     <button class="header__menu-toggle" aria-label="Toggle menu">&#9776;</button>
 
-    <ul class="header__nav-list">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#books">Books</a></li>
-      <li><a href="#feedbacks">Feedbacks</a></li>
-      <li><a href="#events">Events</a></li>
-      <li><a href="#location">Location</a></li>
-    </ul>
-
     <div class="mobile-menu" id="mobileMenu">
       <div class="mobile-menu__header">
-        <img src="/img/company-logo.svg" alt="Logo">
+        <a href="/" aria-label="Go to homepage">
+          <svg class="logo-icon">
+            <use href="/img/sprite.svg#logo" />
+          </svg>
+        </a>
         <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
       </div>
-      <ul class="mobile-menu__list">
+
+      <ul class="header__nav-list">
         <li><a href="#home">Home</a></li>
         <li><a href="#books">Books</a></li>
         <li><a href="#feedbacks">Feedbacks</a></li>
@@ -29,29 +28,3 @@
     </div>
   </nav>
 </header>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const burger = document.querySelector(".header__menu-toggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const closeBtn = document.querySelector(".mobile-menu__close");
-    const navLinks = document.querySelectorAll(".mobile-menu__list a");
-
-    burger.addEventListener("click", () => {
-      mobileMenu.classList.add("open");
-      document.body.classList.add("no-scroll");
-    });
-
-    closeBtn.addEventListener("click", () => {
-      mobileMenu.classList.remove("open");
-      document.body.classList.remove("no-scroll");
-    });
-
-    navLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.remove("open");
-        document.body.classList.remove("no-scroll");
-      });
-    });
-  });
-</script>
