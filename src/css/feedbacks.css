@@ -1,0 +1,166 @@
+.info-container {
+  margin-bottom: 80px;
+}
+
+.title-feedbacks {
+  margin-bottom: 24px;
+}
+
+.info-text {
+  font-size: 18px;
+}
+
+.feedback-card {
+  border: 1px solid rgba(11, 5, 0, 0.15);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 341px;
+  height: 314px;
+  text-align: left;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-card img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+.feedback-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.feedback-card p {
+  font-size: 18px;
+}
+
+.swiper {
+  padding: 20px 0;
+}
+
+.comment {
+  margin-bottom: 24px;
+}
+
+.client-info {
+  display: flex;
+}
+
+.client-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-card .client-title {
+  font-size: 16px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.swiper-slide {
+  list-style: none;
+  flex-shrink: 0;
+}
+
+.feedbackSwiper {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+}
+
+
+/* Feedbacks buttons */
+.feedback-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.sw {
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: background-color 0.3s, transform 0.2s, fill 0.3s, color 0.3s;
+}
+
+.swipe-btn .icon {
+  fill: currentColor;
+  transition: fill 0.3s;
+}
+
+.swipe-btn.sw:hover,
+.swipe-btn.sw:focus {
+  background-color: var(--background-color);
+  color: var(--main-color);
+}
+
+.swipe-btn.sw:active {
+  background-color: var(--brown);
+  color: var(--white);
+}
+
+.swipe-btn.sw:disabled {
+  background-color: var(--strong-orange);
+  opacity: 0.2;
+  color: var(--main-color);
+}
+
+.feedback-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.control-btn {
+  all: unset;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  opacity: 0.2;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.control-btn:active,
+.control-btn:focus {
+  opacity: 1;
+}
+
+.control-btn.active {
+  opacity: 1;
+}
+
+
+@media screen and (min-width: 768px) {
+  .feedback-card {
+    height: 244px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .feedback-card {
+    max-width: 421px;
+    height: 217px;
+  }
+
+  .section-title.title-feedbacks {
+    font-size: 48px;
+  }
+}
