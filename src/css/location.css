@@ -94,4 +94,7 @@
   .p-location {
     max-width: 732px;
   }
+  .nav-container {
+    gap: 80px;
+  }
 }
