@@ -222,4 +222,7 @@
   .events-buttons {
     display: none;
   }
+  .events-subtitle {
+    font-size: 48px;
+  }
 }
