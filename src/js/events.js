@@ -31,7 +31,4 @@ document.addEventListener('DOMContentLoaded', () => {
       clickable: true,
     },
   });
-  window.addEventListener('resize', () => {
-    swiper.update();
-  });
 });
