@@ -6,13 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-register-form');
   const inputs = form.querySelectorAll('input, textarea');
 
+  let scrollPosition = 0; // змінна для збереження позиції
+
   // Відкриття модалки з передачею назви події
   openModalBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       const eventName = e.currentTarget.dataset.event;
       eventTitleEl.textContent = eventName;
       backdrop.classList.add('is-visible');
-      document.body.classList.add('no-scroll');
+
+      // зберігаємо позицію і фіксуємо body
+      scrollPosition = window.pageYOffset;
+      document.documentElement.classList.add('modal-open');
+      document.body.classList.add('modal-open');
+      document.body.style.top = `-${scrollPosition}px`;
     });
   });
 
@@ -35,8 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeModal() {
     backdrop.classList.remove('is-visible');
-    document.body.classList.remove('no-scroll');
+
+    // повертаємо позицію body
+    document.documentElement.classList.remove('modal-open');
+    document.body.classList.remove('modal-open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.overflow = '';
+    window.scrollTo(0, scrollPosition);
+
     form.reset();
+
     // Очистити помилки
     inputs.forEach(input => {
       input.classList.remove('error');
@@ -89,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isValid) {
       console.log('Форма валідна!');
-      // наприклад показати повідомлення про успіх
       form.reset();
       closeModal();
     }

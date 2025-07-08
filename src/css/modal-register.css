@@ -1,5 +1,14 @@
-body.no-scroll {
+html.modal-open {
   overflow: hidden;
+  height: 100%;
+}
+
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .contact-backdrop {
