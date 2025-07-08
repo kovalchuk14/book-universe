@@ -1,5 +1,6 @@
 import { refs } from "./refs"
 import { STORAGE_KEYS } from "./constants";
+import spritePath from "/img/sprite.svg";
 
 export function renderBookCategoriesList(list) {
     const content = list.map((category) => {
@@ -71,7 +72,7 @@ export function renderModalBook(book) {
                         <h3 class="ac-header">
                             <button type="button" class="ac-trigger">Details
                             <svg class="accordion-icon" width="24" height="24">
-                            <use href="/img/sprite.svg#icon-down-type-one"></use>
+                            <use href="${spritePath}#icon-down-type-one"></use>
                             </svg>
                             </button>
                         </h3>
@@ -84,7 +85,7 @@ export function renderModalBook(book) {
                         <h3 class="ac-header">
                             <button type="button" class="ac-trigger">Shipping
                             <svg class="accordion-icon" width="24" height="24">
-                            <use href="/img/sprite.svg#icon-down-type-one"></use>
+                            <use href="${spritePath}#icon-down-type-one"></use>
                             </svg>
                             </button>
                         </h3>
@@ -101,7 +102,7 @@ export function renderModalBook(book) {
                         <h3 class="ac-header">
                             <button type="button" class="ac-trigger">Returns
                             <svg class="accordion-icon" width="24" height="24">
-                            <use href="/img/sprite.svg#icon-down-type-one"></use>
+                            <use href="${spritePath}#icon-down-type-one"></use>
                             </svg>
                             </button>
                         </h3>

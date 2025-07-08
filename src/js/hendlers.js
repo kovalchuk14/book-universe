@@ -4,6 +4,7 @@ import { getBooksListByCategory, getBookById } from "./api";
 import { STORAGE_KEYS } from "./constants";
 import Accordion from "accordion-js";
 import iziToast from "izitoast";
+import spritePath from "/img/sprite.svg";
 
 export function switchBookCategories() {
     if (refs.book_category_list_wrap.style.display === 'block') {
@@ -92,9 +93,9 @@ function deleteButtons() {
 
 function switchBookIcon(event) {
     if (event.target.closest('.ac').classList.contains('is-active')) {
-        event.target.querySelector("use").setAttribute('href', '/img/sprite.svg#icon-up-type-one');
+        event.target.querySelector("use").setAttribute('href', `${spritePath}#icon-up-type-one`);
     } else {
-        event.target.querySelector("use").setAttribute('href', '/img/sprite.svg#icon-down-type-one');
+        event.target.querySelector("use").setAttribute('href', `${spritePath}#icon-down-type-one`);
     }
 }
 
