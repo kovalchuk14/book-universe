@@ -4,10 +4,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { Navigation, Pagination } from 'swiper/modules';
-Swiper.use([Navigation, Pagination]);
 
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper', {
+    modules: [Navigation, Pagination],
     slidesPerView: 1,
     spaceBetween: 30,
     loop: false,
@@ -30,8 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
       el: '.swiper-pagination',
       clickable: true,
     },
-  });
-  window.addEventListener('resize', () => {
-    swiper.update();
   });
 });
