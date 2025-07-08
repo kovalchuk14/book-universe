@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const openModalBtns = document.querySelectorAll('.open-modal-btn');
+  const openModalBtns = document.querySelectorAll('.events-btn');
   const backdrop = document.getElementById('contact-modal-backdrop');
   const closeModalBtn = document.getElementById('contact-close-modal-btn');
   const eventTitleEl = document.getElementById('contact-event-title');
