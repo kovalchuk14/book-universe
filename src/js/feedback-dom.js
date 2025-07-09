@@ -11,7 +11,7 @@ export function renderFeedbacks() {
       <div class="feedback-card">
         <p class="comment">${item.text}</p>
         <div class="client-info">
-          <img src="./${item.avatar}" alt="${item.alt}">
+          <img src="${item.avatar}" alt="${item.alt}">
           <div class="client-text">
             <h3>${item.author}</h3>
             <p class="client-title">${item.title}</p>

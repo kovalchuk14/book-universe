@@ -143,6 +143,10 @@
   opacity: 1;
 }
 
+.control-btn.active {
+  opacity: 1;
+}
+
 
 @media screen and (min-width: 768px) {
   .feedback-card {

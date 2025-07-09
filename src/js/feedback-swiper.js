@@ -2,6 +2,8 @@ import Swiper from "swiper";
 import { Navigation, Keyboard, A11y } from "swiper/modules";
 
 export function initFeedbackSwiper() {
+  const controlButtons = document.querySelectorAll(".control-btn");
+
   const swiper = new Swiper(".feedbackSwiper", {
     modules: [Navigation, Keyboard, A11y],
     slidesPerView: 1,
@@ -29,9 +31,11 @@ export function initFeedbackSwiper() {
     on: {
       slideChange(swiperInstance) {
         updateButtonState(swiperInstance);
+        updateControlButtons(swiperInstance);
       },
       afterInit(swiperInstance) {
         updateButtonState(swiperInstance);
+        updateControlButtons(swiperInstance);
       },
     },
   });
@@ -42,25 +46,34 @@ export function initFeedbackSwiper() {
 
     btnPrev.disabled = swiperInstance.isBeginning;
     btnNext.disabled = swiperInstance.isEnd;
-
-    btnPrev.addEventListener("click", () => btnPrev.blur());
-    btnNext.addEventListener("click", () => btnNext.blur());
   }
 
   function updateControlButtons(swiperInstance) {
-    const controlButtons = document.querySelectorAll(".control-btn");
     controlButtons.forEach((btn, index) => {
-      btn.classList.toggle("active", index === swiperInstance.activeIndex);
+      btn.classList.toggle("active", index === swiperInstance.realIndex);
     });
   }
 
-  // навішування обробників на кнопки
-  const controlButtons = document.querySelectorAll(".control-btn");
+  // додати події кліку на маленькі кнопки
   controlButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const index = parseInt(button.getAttribute("data-index"), 10);
       swiper.slideTo(index);
     });
+  });
+
+  // додати події для Prev/Next з оновленням кнопок
+  const btnPrev = document.getElementById("feedbackPrev");
+  const btnNext = document.getElementById("feedbackNext");
+
+  btnPrev.addEventListener("click", () => {
+    swiper.slidePrev();
+    btnPrev.blur();
+  });
+
+  btnNext.addEventListener("click", () => {
+    swiper.slideNext();
+    btnNext.blur();
   });
 
   return swiper;
