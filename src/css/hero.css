@@ -63,7 +63,7 @@
     background-color: var(--strong-orange);
     color: var(--white);
     cursor: pointer;
-    font: 400 8px / 1.5 "Rubik", sans-serif;
+    font: 400 8.25px / 1.5 "Rubik", sans-serif;
 }
 
 .hero-btn:hover, .hero-btn:focus {
@@ -219,6 +219,7 @@
     }
 
     .hero-title {
+        font-size: 52px;
         max-width: 1168px;
     }
 
