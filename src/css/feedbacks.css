@@ -64,7 +64,7 @@
   flex-wrap: nowrap;
 }
 
-.swiper-slide {
+.feedbacks-swiper-slide {
   list-style: none;
   flex-shrink: 0;
 }
