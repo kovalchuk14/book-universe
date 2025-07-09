@@ -1,0 +1,235 @@
+.modal-book {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    &.modal--is-open {
+        display: flex;
+    }
+}
+
+.modal-book__content {
+    position: relative;
+    width: 100%;
+    max-width: 343px;
+    max-height: 95vh;
+    padding: 16px;
+    /*  */
+    background: var(--background-color);
+    border-radius: 12px;
+    transform: scale(0.95);
+    animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    box-sizing: content-box;
+}
+
+/* width */
+.modal-book__content::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+.modal-book__content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 4px;
+}
+
+/* Handle */
+.modal-book__content::-webkit-scrollbar-thumb {
+    background: var(--light-orange);
+    border-radius: 4px;
+}
+
+.modal-book-close-button {
+    position: absolute;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-book-close-button::after {
+    content: '✕';
+
+    font-size: 1.5rem;
+    color: #2d3748;
+    transition: color 0.3s ease;
+}
+
+
+
+.modal-book-img {
+    width: 100%;
+    height: 467px;
+    border-radius: 8px;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.modal-book-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.2em;
+
+}
+
+.modal-book-author {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.modal-book-price {
+    font-size: 24px;
+    line-height: 1.4em;
+    margin-bottom: 24px;
+}
+
+.modal-book-counter-container {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.modal-book-cart-button {
+    width: 100%;
+    max-width: none;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.modal-book-buy-button {
+    margin-bottom: 32px;
+    height: 48px;
+    width: 100%;
+    max-width: none;
+}
+
+.modal-book-accordion-container .accordion-container {
+    background-color: var(--background-color);
+}
+
+.modal-book-accordion-container .ac {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+.modal-book-accordion-container .ac {
+    padding: 12px 0;
+    border: none;
+    border-top: 1px solid rgb(11, 5, 0, 0.15);
+}
+
+.modal-book-accordion-container .ac:last-child {
+    border-bottom: 1px solid rgb(11, 5, 0, 0.15);
+}
+
+.modal-book-accordion-container * {
+    color: var(--main-color) !important;
+    font-family: Rubik !important;
+    line-height: 150% !important;
+}
+
+.ac-trigger {
+    font-weight: 600 !important;
+    font-size: 18px !important;
+}
+
+.ac-text {
+    font-weight: 400 !important;
+    font-size: 16px !important;
+}
+
+.ac .ac-trigger::after {
+    /* content: "" !important; */
+}
+
+.modal-book-counter {
+    padding: 8px 12px;
+    background-color: rgb(11, 5, 0, 0.05);
+    border: 1px solid rgb(11, 5, 0, 0.15);
+    border-radius: 4px;
+}
+
+.modal-book-counter-button {
+    padding: 8px 12px;
+    color: var(--main-color);
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-book__content {
+        max-width: 704px;
+        padding: 16px 32px;
+    }
+
+    .modal-book-full-info {
+        display: flex;
+        align-items: start;
+        padding: 64px 0;
+    }
+
+    .modal-book-img {
+        margin: 0;
+        margin-right: 24px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .modal-book__content {
+        max-width: 1300px;
+        padding: 16px 104px;
+    }
+
+    .modal-book-img {
+        width: 309px;
+    }
+
+    .modal-book-cart-button,
+    .modal-book-buy-button {
+        max-width: 309px;
+        margin: 0;
+
+    }
+
+    .modal-book-button-container {
+        display: flex;
+        width: 100%;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+}
+
+
+.modal-book-accordion-container .ac .ac-trigger::after {
+    content: "";
+}
+
+.modal-book-accordion-container .ac.is-active>.ac-header .ac-trigger::after {
+    content: "";
+}
+
+.ac-header {
+    position: relative;
+}
+
+.accordion-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 8px;
+}
