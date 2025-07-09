@@ -48,6 +48,7 @@
     flex-direction: row;
     justify-content: space-between;
     position: relative;
+    cursor: pointer;
 }
 
 .book-info {
@@ -87,6 +88,11 @@
     padding: 8px 0;
     font-size: 14px;
     line-height: 1.5em;
+    cursor: pointer;
+}
+
+.book-category:hover {
+    color: var(--strong-orange);
 }
 
 .book-list {

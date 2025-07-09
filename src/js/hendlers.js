@@ -22,6 +22,10 @@ export async function chooseBookCategory(event) {
     if (event.target.textContent == refs.book_menu_text.textContent.trim()) {
         return;
     }
+    document.querySelectorAll(".book-category").forEach(el => {
+        el.style.color = "var(--main-color)";
+      });   
+    event.target.style.color = "var(--strong-orange)";
     refs.book_menu_text.textContent = event.target.textContent;
     if (event.target.textContent == "All categories") {
         STORAGE_KEYS.current_books_category_is_all = true;

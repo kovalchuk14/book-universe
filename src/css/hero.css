@@ -3,6 +3,10 @@
     padding-bottom: 32px;
 }
 
+.swiper .hero-slider {
+    padding: 0;
+}
+
 .hero-container {
     position: relative;
     overflow: hidden;
@@ -136,11 +140,6 @@
     border: 1px solid rgba(11, 5, 0, 0.15);
     opacity: 0.2;
     cursor: not-allowed;
-}
-
-.hero-nav-btn svg {
-    width: 14px;
-    height: 14px;
 }
 
 
