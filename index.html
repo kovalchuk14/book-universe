@@ -15,7 +15,7 @@
   <script type="module" crossorigin src="/book-universe/index.js"></script>
   <link rel="modulepreload" crossorigin href="/book-universe/assets/vendor-CvYJyY29.js">
   <link rel="stylesheet" crossorigin href="/book-universe/assets/vendor-Ctaf7TWq.css">
-  <link rel="stylesheet" crossorigin href="/book-universe/assets/index-Bh9ThrxC.css">
+  <link rel="stylesheet" crossorigin href="/book-universe/assets/index-ByAM-8cR.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
     <nav class="nav">
       <ul class="nav-list">
-        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#hero" class="nav-link">Home</a></li>
         <li><a href="#books" class="nav-link">Books</a></li>
         <li><a href="#feedbacks" class="nav-link">Feedbacks</a></li>
         <li><a href="#events" class="nav-link">Events</a></li>
@@ -76,7 +76,7 @@
         <div class="swiper hero-slider">
             <ul class="swiper-wrapper">
                 <!-- Слайд 1 -->
-                <li class="swiper-slide">
+                <li class="swiper-slide hero-swiper-slide">
                     <div class="hero-slide-item">
                         <img class="hero-image" src="/book-universe/assets/banner3(1x)-D5wk22u-.webp"
                             srcset="/book-universe/assets/banner3(1x)-D5wk22u-.webp 1x, /book-universe/assets/banner3(2x)-C3KTUgn1.webp 2x"
@@ -88,7 +88,7 @@
                     </div>
                 </li>
                 <!-- Слайд 2 -->
-                <li class="swiper-slide">
+                <li class="swiper-slide hero-swiper-slide">
                     <div class="hero-slide-item">
                         <img class="hero-image" src="/book-universe/assets/banner5(1x)-B6UrOvQL.webp"
                             srcset="/book-universe/assets/banner5(1x)-B6UrOvQL.webp 1x, /book-universe/assets/banner5(2x)-ss-oYonu.webp 2x"
@@ -100,7 +100,7 @@
                     </div>
                 </li>
                 <!-- Слайд 3 -->
-                <li class="swiper-slide">
+                <li class="swiper-slide hero-swiper-slide">
                     <div class="hero-slide-item">
                         <img class="hero-image" src="/book-universe/assets/banner6(1x)-B9WrvIYI.webp"
                             srcset="/book-universe/assets/banner6(1x)-B9WrvIYI.webp 1x, /book-universe/assets/banner6(2x)-BAlwnm0V.webp 2x"
@@ -113,7 +113,7 @@
                     </div>
                 </li>
                 <!-- Слайд 4 -->
-                <li class="swiper-slide">
+                <li class="swiper-slide hero-swiper-slide">
                     <div class="hero-slide-item">
                         <img class="hero-image" src="/book-universe/assets/banner7(1x)-BSaK5SD7.webp"
                             srcset="/book-universe/assets/banner7(1x)-BSaK5SD7.webp 1x, /book-universe/assets/banner7(2x)-DcXj5Pyj.webp 2x"
@@ -144,7 +144,7 @@
         </div>
     </div>
 </section>
-    <section class="book-section">
+    <section class="book-section" id="books">
     <div class="container book-container">
         <h2 class="visually-hidden">Trending books</h2>
         <div class="book-interface">
@@ -172,7 +172,7 @@
         </div>
     </div>
 </section>
-    <section class="feedbacks">
+    <section class="feedbacks" id="feedbacks">
   <div class="container">
     <div class="info-container">
       <h2 class="section-title title-feedbacks">Customer Feedbacks</h2>
@@ -195,7 +195,7 @@
       <div class="right-buttons-container">
         <button class="swipe-btn sw" id="feedbackPrev">
           <svg class="icon" width="24" height="24">
-            <use href="/book-universe/assets/sprite-By3KBZBp.svg#icon-left-type-two"></use>  
+            <use href="/book-universe/assets/sprite-By3KBZBp.svg#icon-left-type-two"></use>
           </svg>
         </button>
         <button class="swipe-btn sw" id="feedbackNext">
@@ -208,7 +208,7 @@
     </div>
   </div>
 </section>
-    <section class="events-section container">
+    <section class="events-section container" id="events">
   <p class="events-top">Events</p>
   <h2 class="events-subtitle">Upcoming Events at Booksy</h2>
   <p class="events-descr">
@@ -217,7 +217,7 @@
   </p>
   <div class="events-box swiper">
     <ul class="events-list swiper-wrapper">
-      <li class="swiper-slide">
+      <li class="swiper-slide events-swiper-slide">
         <div class="events-item">
           <div class="events-card-content">
             <picture>
@@ -249,7 +249,7 @@
           </div>
         </div>
       </li>
-      <li class="swiper-slide">
+      <li class="swiper-slide events-swiper-slide">
         <div class="events-item">
           <div class="events-card-content">
             <picture>
@@ -280,7 +280,7 @@
           </div>
         </div>
       </li>
-      <li class="swiper-slide">
+      <li class="swiper-slide events-swiper-slide">
         <div class="events-item">
           <div class="events-card-content">
             <picture>
@@ -342,13 +342,10 @@
       </div>
     </div>
     <div class="article-image-container">
-      <img
-        srcset="/book-universe/assets/article_x1-uz9uxk3r.webp 1x, /book-universe/assets/article_x2-D62Iu5vw.webp 2x"
-      />
+      <img srcset="/book-universe/assets/article_x1-uz9uxk3r.webp 1x, /book-universe/assets/article_x2-D62Iu5vw.webp 2x" alt="" />
     </div>
   </div>
 </section>
-
     <div class="container" id="location">
   <div class="container-location">
     <div class="nav-container">
@@ -370,9 +367,7 @@
             </div>
             <div class="nav-content">
               <h3 class="contact-nav">Email</h3>
-              <a href="mailto:hello@booksy.com" class="nav-li"
-                >hello@booksy.com</a
-              >
+              <a href="mailto:hello@booksy.com" class="nav-li">hello@booksy.com</a>
             </div>
           </li>
           <li class="loc-location">
@@ -394,7 +389,7 @@
             </div>
             <div class="nav-content">
               <h3 class="contact-nav">Office</h3>
-              <p href="" class="">123 Books St, Sydney NSW 2000 AU</p>
+              <p class="">123 Books St, Sydney NSW 2000 AU</p>
             </div>
           </li>
         </ul>
@@ -403,16 +398,11 @@
     <div class="map-location">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26497.988658057733!2d151.15746169207225!3d-33.88325123608467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae2a3f0307d3%3A0xcda527941ab9b09a!2sGleebooks!5e0!3m2!1suk!2sua!4v1751714930749!5m2!1suk!2sua"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        class="map"
-      ></iframe>
+        style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        class="map"></iframe>
     </div>
   </div>
 </div>
-
   </main>
 
   <footer>
@@ -430,10 +420,10 @@
 
           <div class="footer-nav">
             <ul>
-              <li><a href="#homeId" class="nav-link home-link"><span class="nav-text">Home</span></a></li>
-              <li><a href="#BooksId" class="nav-link books-link"><span class="nav-text">Books</span></a></li>
-              <li><a href="#FeedbackId" class="nav-link feedback-link"><span class="nav-text">Feedback</span></a></li>
-              <li><a href="#LocationId" class="nav-link location-link"><span class="nav-text">Location</span></a></li>
+              <li><a href="#hero" class="nav-link home-link"><span class="nav-text">Home</span></a></li>
+              <li><a href="#books" class="nav-link books-link"><span class="nav-text">Books</span></a></li>
+              <li><a href="#feedbacks" class="nav-link feedback-link"><span class="nav-text">Feedback</span></a></li>
+              <li><a href="#location" class="nav-link location-link"><span class="nav-text">Location</span></a></li>
             </ul>
           </div>
         </div>
