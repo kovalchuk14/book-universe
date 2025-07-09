@@ -1,17 +1,19 @@
 import { getBooksCategoriesList, getBooksList, getBooksListByCategory } from "./api";
 import { renderBookCategoriesList, renderBookList, updateBookCounter } from "./render-function";
 import { refs } from "./refs";
-import { switchBookCategories, chooseBookCategory, openBook, closeBook, showMoreBooks, } from "./hendlers";
+import { switchBookCategories, chooseBookCategory, openBook, closeBook, showMoreBooks, showLoader, hideLoader} from "./hendlers";
 import { STORAGE_KEYS } from "./constants";
 import "accordion-js/dist/accordion.min.css";
 import "izitoast/dist/css/iziToast.min.css";
 
 
 async function initCategoryList() {
+    showLoader();
     let list = await getBooksCategoriesList();
     list = list.filter(item => item.list_name?.trim());
     list.unshift({ list_name: "All categories" });
     renderBookCategoriesList(list);
+    hideLoader();
 }
 
 async function initBooks() {
