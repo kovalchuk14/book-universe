@@ -6,6 +6,7 @@ export function renderFeedbacks() {
   feedbacks.forEach((item) => {
     const li = document.createElement("li");
     li.classList.add("swiper-slide");
+    li.classList.add("feedbacks-swiper-slide");
 
     li.innerHTML = `
       <div class="feedback-card">
