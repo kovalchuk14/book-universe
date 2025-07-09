@@ -40,9 +40,11 @@ export async function chooseBookCategory(event) {
         STORAGE_KEYS.current_books_count = Math.min(STORAGE_KEYS.book_list.length, (window.innerWidth <= 767) ? 10 : 24);
         STORAGE_KEYS.max_books_count = STORAGE_KEYS.book_list.length;
     } else {
+        showLoader();
         STORAGE_KEYS.book_list_with_category = await getBooksListByCategory(event.target.textContent);
         STORAGE_KEYS.current_books_count = Math.min(STORAGE_KEYS.book_list_with_category.length, (window.innerWidth <= 767) ? 10 : 24);
         renderBookList(STORAGE_KEYS.book_list_with_category, 0, STORAGE_KEYS.current_books_count);
+        hideLoader();
         STORAGE_KEYS.max_books_count = STORAGE_KEYS.book_list_with_category.length;
     }
     updateBookCounter();
@@ -64,8 +66,10 @@ export function addToCartBook() {
 
 export async function openBook(event) {
     if (!event.target.classList.contains("book-btn")) return;
+    showLoader();
     let book = await getBookById(event.target.closest("li").dataset.id);
     renderModalBook(book);
+    hideLoader();
     new Accordion(".accordion-container", {
         showMultiple: true,
     });
@@ -139,5 +143,11 @@ export function showMoreBooks() {
     updateShowButton();
 }
 
+export function showLoader() {
+    document.querySelector(".loader").style.display = "block";
+}
 
+export function hideLoader() {
+    document.querySelector(".loader").style.display = "none";
+}
 
