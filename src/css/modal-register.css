@@ -65,9 +65,7 @@ body.modal-open {
   cursor: pointer;
 }
 
-.contact-close-btn svg.icon {
-  padding: 8px;
-}
+
 
 .contact-modal-title {
   font-weight: 600;
