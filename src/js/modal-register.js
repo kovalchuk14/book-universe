@@ -1,3 +1,5 @@
+import iziToast from "izitoast";
+
 document.addEventListener('DOMContentLoaded', () => {
   const openModalBtns = document.querySelectorAll('.events-btn');
   const backdrop = document.getElementById('contact-modal-backdrop');
@@ -91,9 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (isValid) {
-      console.log('Форма валідна!');
-      form.reset();
-      closeModal();
+      iziToast.success({
+        title: 'NICEEE',
+        message: 'Successfully registered',
+    });
     }
   }
+
+  
 });
